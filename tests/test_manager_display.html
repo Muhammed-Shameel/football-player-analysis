@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Manager Display</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .manager-card {
+            border: 2px solid #1a6dcc;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            padding: 20px;
+        }
+        
+        .manager-name-score {
+            font-size: 1.2rem;
+            color: #1a6dcc;
+            border-bottom: 2px solid #1a6dcc;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+        }
+        
+        .manager-formations {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Test Manager Display</h1>
+        <div id="managersContainer" class="row">
+            <!-- Managers will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        // Sample manager data
+        const managers = [
+            {
+                "Manager_ID": "M03",
+                "Manager_Name": "Manager 3",
+                "tactic_count": 69,
+                "relevance_score": 1.0,
+                "formations": ["4-2-2-2"]
+            },
+            {
+                "Manager_ID": "M04",
+                "Manager_Name": "Manager 4",
+                "tactic_count": 35,
+                "relevance_score": 0.857,
+                "formations": ["4-3-3", "4-2-3-1"]
+            }
+        ];
+
+        // Function to display managers
+        function displayManagers(managers) {
+            const managersContainer = document.getElementById('managersContainer');
+            managersContainer.innerHTML = '';
+            
+            // Filter out manager_id = "M21" ("Other") and sort by relevance score (highest first)
+            const filteredManagers = managers
+                .filter(manager => manager.Manager_ID !== "M21")
+                .sort((a, b) => b.relevance_score - a.relevance_score);
+            
+            // Display managers in rectangles with manager name + relevance score and formations
+            filteredManagers.forEach(manager => {
+                const managerCol = document.createElement('div');
+                managerCol.className = 'col-md-6 mb-3';
+                // Ensure formations is an array before mapping
+                const formations = Array.isArray(manager.formations) ? manager.formations : [];
+                managerCol.innerHTML = `
+                    <div class="manager-card">
+                        <div class="manager-content">
+                            <div class="manager-name-score fw-bold">${manager.Manager_Name} (${manager.relevance_score.toFixed(3)})</div>
+                            <div class="manager-formations">
+                                ${formations && formations.length > 0 ? 
+                                    formations.map(formation => `• ${formation}`).join('<br>') : 
+                                    'No formations available'}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                managersContainer.appendChild(managerCol);
+            });
+        }
+
+        // Display the managers when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            displayManagers(managers);
+        });
+    </script>
+</body>
+</html>

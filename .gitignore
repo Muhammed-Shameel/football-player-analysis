@@ -1,0 +1,31 @@
+# Python
+**/__pycache__/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+*.log
+
+# Node / React
+**/node_modules/
+node_modules/
+dist/
+build/
+.vite/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary / Analysis cache & IDE
+.gemini/
+.env
+.env.local

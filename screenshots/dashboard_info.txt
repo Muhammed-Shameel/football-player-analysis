@@ -1,0 +1,5 @@
+This directory should contain a screenshot of the dashboard showing:
+1. Player selection dropdown with player names
+2. Recommendations table with player names, tactical components, Player's best  Attributes and impact scores
+3. Bar chart showing tactical impact simulation for the selected player
+4. Responsive design with clean styling

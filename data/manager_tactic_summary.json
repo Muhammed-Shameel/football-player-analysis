@@ -1,0 +1,262 @@
+{
+  "M01": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_1",
+        "count": 91
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_1",
+      "count": 91
+    }
+  },
+  "M02": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_2",
+        "count": 31
+      },
+      {
+        "tactic": "Tactic_Component_6",
+        "count": 288
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_6",
+      "count": 288
+    }
+  },
+  "M03": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_5",
+        "count": 69
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_5",
+      "count": 69
+    }
+  },
+  "M04": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_6",
+        "count": 259
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_6",
+      "count": 259
+    }
+  },
+  "M05": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_3",
+        "count": 38
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_3",
+      "count": 38
+    }
+  },
+  "M06": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_1",
+        "count": 71
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_1",
+      "count": 71
+    }
+  },
+  "M07": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_2",
+        "count": 74
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_2",
+      "count": 74
+    }
+  },
+  "M08": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_2",
+        "count": 177
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_2",
+      "count": 177
+    }
+  },
+  "M09": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_1",
+        "count": 33
+      },
+      {
+        "tactic": "Tactic_Component_4",
+        "count": 162
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_4",
+      "count": 162
+    }
+  },
+  "M10": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_4",
+        "count": 15
+      },
+      {
+        "tactic": "Tactic_Component_7",
+        "count": 25
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_7",
+      "count": 25
+    }
+  },
+  "M11": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_7",
+        "count": 10
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_7",
+      "count": 10
+    }
+  },
+  "M12": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_7",
+        "count": 19
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_7",
+      "count": 19
+    }
+  },
+  "M13": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_7",
+        "count": 211
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_7",
+      "count": 211
+    }
+  },
+  "M14": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_1",
+        "count": 118
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_1",
+      "count": 118
+    }
+  },
+  "M15": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_1",
+        "count": 28
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_1",
+      "count": 28
+    }
+  },
+  "M16": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_1",
+        "count": 110
+      },
+      {
+        "tactic": "Tactic_Component_6",
+        "count": 49
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_1",
+      "count": 110
+    }
+  },
+  "M17": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_3",
+        "count": 4
+      },
+      {
+        "tactic": "Tactic_Component_4",
+        "count": 65
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_4",
+      "count": 65
+    }
+  },
+  "M18": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_7",
+        "count": 83
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_7",
+      "count": 83
+    }
+  },
+  "M19": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_2",
+        "count": 137
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_2",
+      "count": 137
+    }
+  },
+  "M20": {
+    "tactics": [
+      {
+        "tactic": "Tactic_Component_3",
+        "count": 439
+      }
+    ],
+    "main_tactic": {
+      "tactic": "Tactic_Component_3",
+      "count": 439
+    }
+  }
+}
