@@ -88,7 +88,9 @@ def get_player_info():
 def get_recommendations():
     """Get tactical recommendations for a player with enriched metadata"""
     player_id = request.args.get('player_id') or (request.json and request.json.get('player_id')) or request.form.get('player_id')
-    model_name = request.args.get('model') or (request.json and request.json.get('model')) or request.form.get('model_name', 'XGBoost')
+    model_name = request.args.get('model') or (request.json and request.json.get('model')) or request.form.get('model_name', BEST_MODEL)
+    if model_name not in MODELS:
+        model_name = BEST_MODEL
     year = request.args.get('year') or (request.json and request.json.get('year')) or request.form.get('year')
     
     if not player_id:
@@ -134,7 +136,9 @@ def get_recommendations():
 def get_managers_for_player():
     """Get top recommended managers for a player"""
     player_id = request.args.get('player_id') or (request.json and request.json.get('player_id')) or request.form.get('player_id')
-    model_name = request.args.get('model') or (request.json and request.json.get('model')) or request.form.get('model_name', 'XGBoost')
+    model_name = request.args.get('model') or (request.json and request.json.get('model')) or request.form.get('model_name', BEST_MODEL)
+    if model_name not in MODELS:
+        model_name = BEST_MODEL
     year = request.args.get('year') or (request.json and request.json.get('year')) or request.form.get('year')
     
     if not player_id:

@@ -1,6 +1,7 @@
 import pandas as pd
 import pickle
 import json
+import joblib
 from backend.config import (
     PLAYER_DATA_PATH,
     DF_MODEL_PATH,
@@ -45,7 +46,13 @@ class DataService:
 
         # Load team.csv
         try:
-            self.team_data = pd.read_csv(TEAM_DATA_PATH)
+            try:
+                self.team_data = pd.read_csv(TEAM_DATA_PATH, encoding='utf-8')
+            except Exception:
+                try:
+                    self.team_data = pd.read_csv(TEAM_DATA_PATH, encoding='latin-1')
+                except Exception:
+                    self.team_data = pd.read_excel(TEAM_DATA_PATH)
         except Exception as e:
             print(f"Error loading {TEAM_DATA_PATH}: {e}")
             self.team_data = pd.DataFrame()
@@ -82,8 +89,11 @@ class DataService:
 
         # Load label encoder
         try:
-            with open(LABEL_ENCODER_PATH, 'rb') as f:
-                self.label_encoder = pickle.load(f)
+            try:
+                self.label_encoder = joblib.load(LABEL_ENCODER_PATH)
+            except Exception:
+                with open(LABEL_ENCODER_PATH, 'rb') as f:
+                    self.label_encoder = pickle.load(f)
         except Exception as e:
             print(f"Warning: Could not load {LABEL_ENCODER_PATH}: {e}")
 

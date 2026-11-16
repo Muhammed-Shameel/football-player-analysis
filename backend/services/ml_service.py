@@ -1,5 +1,6 @@
 import os
 import pickle
+import joblib
 import numpy as np
 import pandas as pd
 from backend.config import MODELS
@@ -7,13 +8,15 @@ from backend.services.data_service import data_service
 
 class MLService:
     def load_model(self, model_name):
-        """Load the specified model - with fallback for corrupted models"""
+        """Load the specified model - with joblib and pickle fallback"""
         model_path = MODELS.get(model_name)
         if model_path and os.path.exists(model_path):
             try:
-                with open(model_path, 'rb') as f:
-                    model = pickle.load(f)
-                return model
+                try:
+                    return joblib.load(model_path)
+                except Exception:
+                    with open(model_path, 'rb') as f:
+                        return pickle.load(f)
             except Exception as e:
                 print(f"Error loading model {model_name}: {e}")
                 return None
